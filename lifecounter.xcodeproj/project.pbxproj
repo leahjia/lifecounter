@@ -16,7 +16,6 @@
 		082D77C02BD0762400B8D887 /* lifecounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D77BF2BD0762400B8D887 /* lifecounterTests.swift */; };
 		082D77CA2BD0762400B8D887 /* lifecounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D77C92BD0762400B8D887 /* lifecounterUITests.swift */; };
 		082D77CC2BD0762400B8D887 /* lifecounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D77CB2BD0762400B8D887 /* lifecounterUITestsLaunchTests.swift */; };
-		082D77D92BD0E5DD00B8D887 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D77D82BD0E5DD00B8D887 /* Buttons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		082D77C52BD0762400B8D887 /* lifecounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lifecounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		082D77C92BD0762400B8D887 /* lifecounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifecounterUITests.swift; sourceTree = "<group>"; };
 		082D77CB2BD0762400B8D887 /* lifecounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifecounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		082D77D82BD0E5DD00B8D887 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +106,6 @@
 				082D77B12BD0762300B8D887 /* Assets.xcassets */,
 				082D77B32BD0762300B8D887 /* LaunchScreen.storyboard */,
 				082D77B62BD0762300B8D887 /* Info.plist */,
-				082D77D82BD0E5DD00B8D887 /* Buttons.swift */,
 			);
 			path = lifecounter;
 			sourceTree = "<group>";
@@ -264,7 +261,6 @@
 				082D77AD2BD0761F00B8D887 /* ViewController.swift in Sources */,
 				082D77A92BD0761F00B8D887 /* AppDelegate.swift in Sources */,
 				082D77AB2BD0761F00B8D887 /* SceneDelegate.swift in Sources */,
-				082D77D92BD0E5DD00B8D887 /* Buttons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
