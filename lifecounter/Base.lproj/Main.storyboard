@@ -134,6 +134,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xlt-G0-nbL" secondAttribute="trailing" id="Ror-oe-G15"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xlt-G0-nbL" secondAttribute="bottom" id="WQf-7n-gcf"/>
                             <constraint firstAttribute="trailing" secondItem="UnV-k0-fWp" secondAttribute="trailing" id="YTR-bc-eto"/>
+                            <constraint firstItem="Xlt-G0-nbL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="50" id="o2q-rU-SFk"/>
                             <constraint firstItem="Xlt-G0-nbL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ovh-9r-0PR"/>
                             <constraint firstItem="TYv-Z9-3Ef" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="pVq-8q-OI9"/>
                             <constraint firstItem="UnV-k0-fWp" firstAttribute="top" secondItem="TYv-Z9-3Ef" secondAttribute="bottom" constant="10" id="qge-eJ-fHi"/>

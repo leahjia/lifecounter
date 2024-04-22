@@ -16,6 +16,8 @@
 		082D77C02BD0762400B8D887 /* lifecounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D77BF2BD0762400B8D887 /* lifecounterTests.swift */; };
 		082D77CA2BD0762400B8D887 /* lifecounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D77C92BD0762400B8D887 /* lifecounterUITests.swift */; };
 		082D77CC2BD0762400B8D887 /* lifecounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D77CB2BD0762400B8D887 /* lifecounterUITestsLaunchTests.swift */; };
+		089D220C2BD7285B00B511D4 /* playerCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089D220B2BD7285B00B511D4 /* playerCellTableViewCell.xib */; };
+		089D220D2BD7285B00B511D4 /* playerCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D220A2BD7285B00B511D4 /* playerCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		082D77C52BD0762400B8D887 /* lifecounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lifecounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		082D77C92BD0762400B8D887 /* lifecounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifecounterUITests.swift; sourceTree = "<group>"; };
 		082D77CB2BD0762400B8D887 /* lifecounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifecounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		089D220A2BD7285B00B511D4 /* playerCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerCellTableViewCell.swift; sourceTree = "<group>"; };
+		089D220B2BD7285B00B511D4 /* playerCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = playerCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		082D77A72BD0761F00B8D887 /* lifecounter */ = {
 			isa = PBXGroup;
 			children = (
+				089D220A2BD7285B00B511D4 /* playerCellTableViewCell.swift */,
+				089D220B2BD7285B00B511D4 /* playerCellTableViewCell.xib */,
 				082D77A82BD0761F00B8D887 /* AppDelegate.swift */,
 				082D77AA2BD0761F00B8D887 /* SceneDelegate.swift */,
 				082D77AC2BD0761F00B8D887 /* ViewController.swift */,
@@ -231,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089D220C2BD7285B00B511D4 /* playerCellTableViewCell.xib in Resources */,
 				082D77B22BD0762300B8D887 /* Assets.xcassets in Resources */,
 				082D77B52BD0762300B8D887 /* Base in Resources */,
 				082D77B02BD0761F00B8D887 /* Base in Resources */,
@@ -258,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089D220D2BD7285B00B511D4 /* playerCellTableViewCell.swift in Sources */,
 				082D77AD2BD0761F00B8D887 /* ViewController.swift in Sources */,
 				082D77A92BD0761F00B8D887 /* AppDelegate.swift in Sources */,
 				082D77AB2BD0761F00B8D887 /* SceneDelegate.swift in Sources */,
