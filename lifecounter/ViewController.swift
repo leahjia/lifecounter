@@ -10,15 +10,19 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var changeNum1: UITextField!
-    @IBOutlet weak var label2: UILabel!
-    @IBOutlet weak var changeNum2: UITextField!
     @IBOutlet weak var loser: UILabel!
+
+    @IBOutlet weak var tableView: UITableView!
+
+    var strings: [String] = ["Player 1", "Player 2", "Player 3", "Player 4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+//        view.backgroundColor = .black
+
+        tableView.dataSource = self
     }
- 
+
     private func parseLifeCount(from label: UILabel) -> Int? {
         guard let lifeText = label.text else { return nil }
         let components = lifeText.components(separatedBy: ":")
@@ -53,24 +57,16 @@ class ViewController: UIViewController {
         let minusAmount = Int(changeNum1.text!) ?? 0
         updateLife(label: label1, change: -minusAmount)
     }
-    
-    @IBAction func player2plus1(_ sender: Any) {
-        updateLife(label: label2, change: 1)
-    }
-
-    @IBAction func player2plus5(_ sender: Any) {
-        let plusAmount = Int(changeNum2.text!) ?? 0
-        updateLife(label: label2, change: plusAmount)
-    }
-
-    @IBAction func player2minus1(_ sender: Any) {
-        updateLife(label: label2, change: -1)
-    }
-
-    @IBAction func player2minus5(_ sender: Any) {
-        let minusAmount = Int(changeNum2.text!) ?? 0
-        updateLife(label: label2, change: -minusAmount)
-    }
-
 }
 
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return strings.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = strings[indexPath.row]
+        return cell
+    }
+}
