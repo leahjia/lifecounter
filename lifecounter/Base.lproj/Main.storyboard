@@ -16,14 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="              " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnV-k0-fWp">
-                                <rect key="frame" x="0.0" y="804.66666666666663" width="393" height="47.333333333333371"/>
-                                <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="35"/>
-                                <color key="textColor" systemColor="systemMintColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xlt-G0-nbL">
-                                <rect key="frame" x="0.0" y="59" width="393" height="738"/>
+                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="rDc-ae-g1b">
@@ -36,24 +30,45 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oH7-DA-ugE">
+                                <rect key="frame" x="47" y="90" width="116" height="36"/>
+                                <size key="titleShadowOffset" width="5" height="5"/>
+                                <buttonConfiguration key="configuration" style="filled" title="History" titleAlignment="automatic">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.70189966010000004" blue="0.22875557229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bsS-Im-YTM">
+                                <rect key="frame" x="229" y="90" width="117" height="36"/>
+                                <size key="titleShadowOffset" width="5" height="5"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add Player" titleAlignment="automatic">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.70189966010000004" blue="0.22875557229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="oH7-DA-ugE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="7mJ-R6-HOa"/>
+                            <constraint firstItem="bsS-Im-YTM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="DfL-EW-p3M"/>
                             <constraint firstItem="Xlt-G0-nbL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GaP-W7-GVe"/>
-                            <constraint firstAttribute="bottom" secondItem="UnV-k0-fWp" secondAttribute="bottom" id="JYy-zm-o4U"/>
-                            <constraint firstItem="UnV-k0-fWp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LoN-tK-eRV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xlt-G0-nbL" secondAttribute="trailing" id="Ror-oe-G15"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xlt-G0-nbL" secondAttribute="bottom" id="WQf-7n-gcf"/>
-                            <constraint firstItem="UnV-k0-fWp" firstAttribute="top" secondItem="Xlt-G0-nbL" secondAttribute="bottom" constant="50" id="XTE-2P-i2N"/>
-                            <constraint firstAttribute="trailing" secondItem="UnV-k0-fWp" secondAttribute="trailing" id="YTR-bc-eto"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bsS-Im-YTM" secondAttribute="trailing" constant="47" id="RrK-2H-yqk"/>
+                            <constraint firstItem="oH7-DA-ugE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="Tmx-Do-klV"/>
+                            <constraint firstItem="Xlt-G0-nbL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bWs-s8-Epj"/>
+                            <constraint firstItem="Xlt-G0-nbL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dKa-Zo-G8k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xlt-G0-nbL" secondAttribute="bottom" id="gDV-ZM-eyo"/>
                             <constraint firstItem="Xlt-G0-nbL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ovh-9r-0PR"/>
-                            <constraint firstItem="Xlt-G0-nbL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="plx-Wt-sua"/>
+                            <constraint firstItem="Xlt-G0-nbL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="rFi-IY-KWj"/>
                             <constraint firstItem="Xlt-G0-nbL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wlJ-5H-0f9"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loser" destination="UnV-k0-fWp" id="30S-C5-keU"/>
+                        <outlet property="addPlayer" destination="bsS-Im-YTM" id="g2b-On-juv"/>
+                        <outlet property="history" destination="oH7-DA-ugE" id="MkG-TP-cJf"/>
                         <outlet property="tableView" destination="Xlt-G0-nbL" id="wja-X2-Nqs"/>
                     </connections>
                 </viewController>
@@ -66,8 +81,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
