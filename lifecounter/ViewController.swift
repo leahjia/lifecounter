@@ -34,6 +34,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: playerCellTableViewCell.identifier, for: indexPath) as! playerCellTableViewCell
         cell.playerLabel.text = players[indexPath.row]
+        cell.playerLabel.tag = indexPath.row + 1
         return cell
     }
 }

@@ -57,7 +57,7 @@ class playerCellTableViewCell: UITableViewCell {
     private func updateLife(label: UILabel, change: Int) {
         if let currentLife = parseLifeCount(from: label) {
             let newLife = currentLife + change
-            label.text = "Player \(label == playerLabel ? "1" : "2") life: \(newLife)"
+            label.text = "Player \(playerLabel.tag) life: \(newLife)"
         }
     }
 
