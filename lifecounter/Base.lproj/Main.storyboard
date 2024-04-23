@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xlt-G0-nbL">
-                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
+                                <rect key="frame" x="0.0" y="276" width="393" height="542"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="rDc-ae-g1b">
@@ -31,7 +31,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oH7-DA-ugE">
-                                <rect key="frame" x="47" y="90" width="116" height="36"/>
+                                <rect key="frame" x="57" y="89" width="121" height="36"/>
                                 <size key="titleShadowOffset" width="5" height="5"/>
                                 <buttonConfiguration key="configuration" style="filled" title="History" titleAlignment="automatic">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
@@ -39,36 +39,43 @@
                                     <color key="baseBackgroundColor" red="1" green="0.70189966010000004" blue="0.22875557229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bsS-Im-YTM">
-                                <rect key="frame" x="229" y="90" width="117" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2f-am-3yF">
+                                <rect key="frame" x="215" y="89" width="109" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <size key="titleShadowOffset" width="5" height="5"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Add Player" titleAlignment="automatic">
+                                <buttonConfiguration key="configuration" style="filled" title="Reset" titleAlignment="automatic">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" systemColor="tintColor"/>
                                     <color key="baseBackgroundColor" red="1" green="0.70189966010000004" blue="0.22875557229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minimumValue="2" maximumValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="y5q-X8-k4T">
+                                <rect key="frame" x="222" y="142" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <action selector="playerStepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Arf-8D-yd9"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Xlt-G0-nbL" firstAttribute="top" secondItem="oH7-DA-ugE" secondAttribute="bottom" constant="150" id="5sU-Ji-yCK"/>
                             <constraint firstItem="oH7-DA-ugE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="7mJ-R6-HOa"/>
-                            <constraint firstItem="bsS-Im-YTM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="DfL-EW-p3M"/>
                             <constraint firstItem="Xlt-G0-nbL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GaP-W7-GVe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xlt-G0-nbL" secondAttribute="trailing" id="Ror-oe-G15"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bsS-Im-YTM" secondAttribute="trailing" constant="47" id="RrK-2H-yqk"/>
                             <constraint firstItem="oH7-DA-ugE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="Tmx-Do-klV"/>
                             <constraint firstItem="Xlt-G0-nbL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bWs-s8-Epj"/>
                             <constraint firstItem="Xlt-G0-nbL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dKa-Zo-G8k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xlt-G0-nbL" secondAttribute="bottom" id="gDV-ZM-eyo"/>
                             <constraint firstItem="Xlt-G0-nbL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ovh-9r-0PR"/>
-                            <constraint firstItem="Xlt-G0-nbL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="rFi-IY-KWj"/>
                             <constraint firstItem="Xlt-G0-nbL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wlJ-5H-0f9"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addPlayer" destination="bsS-Im-YTM" id="g2b-On-juv"/>
                         <outlet property="history" destination="oH7-DA-ugE" id="MkG-TP-cJf"/>
+                        <outlet property="playerStepper" destination="y5q-X8-k4T" id="e6u-g5-EG3"/>
                         <outlet property="tableView" destination="Xlt-G0-nbL" id="wja-X2-Nqs"/>
                     </connections>
                 </viewController>
@@ -80,6 +87,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

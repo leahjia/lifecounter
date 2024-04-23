@@ -8,23 +8,39 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var label1: UILabel!
-    @IBOutlet weak var changeNum1: UITextField!
-    @IBOutlet weak var loser: UILabel!
-
     @IBOutlet weak var history: UIButton!
-    @IBOutlet weak var addPlayer: UIButton!
+    @IBOutlet weak var playerStepper: UIStepper!
+
     @IBOutlet weak var tableView: UITableView!
 
-    var players: [String] = ["Player 1 life: 20", "Player 2 life: 20", "Player 3 life: 20", "Player 4 life: 20", "Player 5 life: 20", "Player 6 life: 20", "Player 7 life: 20", "Player 8 life: 20"]
+    var players: [String] = ["Player 1 life: 20", "Player 2 life: 20", "Player 3 life: 20", "Player 4 life: 20"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        view.backgroundColor = .black
+        playerStepper.minimumValue = 2
+        playerStepper.maximumValue = 8
+        playerStepper.value = Double(players.count)
+        playerStepper.stepValue = 1  // Increment by 1
 
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(playerCellTableViewCell.nib(), forCellReuseIdentifier: playerCellTableViewCell.identifier)
+    }
+    
+    @IBAction func playerStepperChanged(_ sender: UIStepper) {
+        let newCount = Int(sender.value)
+        
+        while newCount > players.count && players.count < 8 {
+            let newPlayerNumber = players.count + 1
+            players.append("Player \(newPlayerNumber) life: 20")
+        }
+        
+        while newCount < players.count && players.count > 2 {
+            players.removeLast()
+        }
+        
+        tableView.reloadData()
     }
 }
 
