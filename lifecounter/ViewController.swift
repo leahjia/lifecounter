@@ -11,13 +11,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var history: UIButton!
     @IBOutlet weak var playerStepper: UIStepper!
 
+    @IBOutlet weak var reset: UIButton!
     @IBOutlet weak var tableView: UITableView!
 
     var players: [String] = ["Player 1 life: 20", "Player 2 life: 20", "Player 3 life: 20", "Player 4 life: 20"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .black
+        view.backgroundColor = .black
         playerStepper.minimumValue = 2
         playerStepper.maximumValue = 8
         playerStepper.value = Double(players.count)
@@ -27,6 +28,15 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.register(playerCellTableViewCell.nib(), forCellReuseIdentifier: playerCellTableViewCell.identifier)
     }
+    
+    @IBAction func resetPlayerLives(_ sender: UIButton) {
+        for index in 0..<players.count {
+            let playerNumber = index + 1
+            players[index] = "Player \(playerNumber) life: 20"
+        }
+        tableView.reloadData()
+    }
+
     
     @IBAction func playerStepperChanged(_ sender: UIStepper) {
         let newCount = Int(sender.value)

@@ -48,6 +48,9 @@
                                     <color key="baseForegroundColor" systemColor="tintColor"/>
                                     <color key="baseBackgroundColor" red="1" green="0.70189966010000004" blue="0.22875557229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetPlayerLives:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LI2-Qq-D43"/>
+                                </connections>
                             </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minimumValue="2" maximumValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="y5q-X8-k4T">
                                 <rect key="frame" x="222" y="142" width="94" height="32"/>
@@ -76,6 +79,7 @@
                     <connections>
                         <outlet property="history" destination="oH7-DA-ugE" id="MkG-TP-cJf"/>
                         <outlet property="playerStepper" destination="y5q-X8-k4T" id="e6u-g5-EG3"/>
+                        <outlet property="reset" destination="T2f-am-3yF" id="lIB-tX-bAo"/>
                         <outlet property="tableView" destination="Xlt-G0-nbL" id="wja-X2-Nqs"/>
                     </connections>
                 </viewController>
