@@ -27,12 +27,12 @@ class playerCellTableViewCell: UITableViewCell {
     }
     
     @IBAction func minusNum(_ sender: Any) {
-        updateLife(label: playerLabel, change: Int(changeNum.text!) ?? 0)
+        let num = Int(changeNum.text!) ?? 0
+        updateLife(label: playerLabel, change: -num)
     }
     
     @IBAction func plusNum(_ sender: Any) {
-        let num = Int(changeNum.text!) ?? 0
-        updateLife(label: playerLabel, change: -num)
+        updateLife(label: playerLabel, change: Int(changeNum.text!) ?? 0)
     }
     
     override func awakeFromNib() {

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var players: [String] = ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5", "Player 6", "Player 7", "Player 8"]
+    var players: [String] = ["Player 1 life: 20", "Player 2 life: 20", "Player 3 life: 20", "Player 4 life: 20", "Player 5 life: 20", "Player 6 life: 20", "Player 7 life: 20", "Player 8 life: 20"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
