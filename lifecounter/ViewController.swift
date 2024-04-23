@@ -22,14 +22,14 @@ class ViewController: UIViewController {
         playerStepper.minimumValue = 2
         playerStepper.maximumValue = 8
         playerStepper.value = Double(players.count)
-        playerStepper.stepValue = 1  // Increment by 1
+        playerStepper.stepValue = 1
 
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(playerCellTableViewCell.nib(), forCellReuseIdentifier: playerCellTableViewCell.identifier)
     }
     
-    @IBAction func resetPlayerLives(_ sender: UIButton) {
+    @IBAction func resetPlayerLives(_ sender: UIButton? = nil) {
         for index in 0..<players.count {
             let playerNumber = index + 1
             players[index] = "Player \(playerNumber) life: 20"
@@ -63,6 +63,19 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: playerCellTableViewCell.identifier, for: indexPath) as! playerCellTableViewCell
         cell.playerLabel.text = players[indexPath.row]
         cell.playerLabel.tag = indexPath.row + 1
+        cell.viewController = self
+
         return cell
     }
+    
+    func endGame() {
+        let alert = UIAlertController(title: "Game Over!", message: "Resetting game...", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            self?.resetPlayerLives()
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+
+    
 }

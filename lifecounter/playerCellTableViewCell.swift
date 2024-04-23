@@ -37,14 +37,11 @@ class playerCellTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     private func parseLifeCount(from label: UILabel) -> Int? {
@@ -54,10 +51,14 @@ class playerCellTableViewCell: UITableViewCell {
         return Int(components[1].trimmingCharacters(in: .whitespaces))
     }
     
+    weak var viewController: ViewController?
     private func updateLife(label: UILabel, change: Int) {
         if let currentLife = parseLifeCount(from: label) {
             let newLife = currentLife + change
             label.text = "Player \(playerLabel.tag) life: \(newLife)"
+            if newLife < 0 {
+                viewController?.endGame()
+            }
         }
     }
 
